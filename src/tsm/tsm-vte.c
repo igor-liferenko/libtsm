@@ -2457,10 +2457,12 @@ bool tsm_vte_handle_keyboard(struct tsm_vte *vte, uint32_t keysym,
 			vte_write(vte, "\x1b", 1);
 			return true;
 		case XKB_KEY_KP_Enter:
+#if 1==0
 			if (vte->flags & FLAG_KEYPAD_APPLICATION_MODE) {
 				vte_write(vte, "\eOM", 3);
 				return true;
 			}
+#endif
 			/* fallthrough */
 		case XKB_KEY_Return:
 			if (vte->flags & FLAG_LINE_FEED_NEW_LINE_MODE)
