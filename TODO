@@ -2,4 +2,4 @@ understand when is called this code:
   llog_debug(vte, "unhandled control char %u", ctrl);
 (this happens when I do cfmakeraw on controlling tty and press CTRL+C)
 
-make that part of text will be bold in manpages, like in gnome-terminal
+make that bold and underlined text will be handled manpages, like it is in gnome-terminal
