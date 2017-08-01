@@ -1,3 +1,5 @@
 understand when is called this code:
   llog_debug(vte, "unhandled control char %u", ctrl);
 (this happens when I do cfmakeraw on controlling tty and press CTRL+C)
+
+make that part of text will be bold in manpages, like in gnome-terminal
