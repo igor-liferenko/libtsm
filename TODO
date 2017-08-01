@@ -1,0 +1,3 @@
+understand when is called this code:
+  llog_debug(vte, "unhandled control char %u", ctrl);
+(this happens when I do cfmakeraw on controlling tty and press CTRL+C)
