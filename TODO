@@ -7,4 +7,4 @@ make that bold and underlined text will be handled manpages, like it is in gnome
 ^[[H is hijacked by ncurses programs, because they use "application" mode, which switches to using ^[OH. So, ^[[F may also be hijacked, because it is not used. Use it when pressing ^[ while in application mode. But then you will have to add it to terminfo, and make it recognizable by ncurses.
 So, current hack about KP_Enter must be canceled altogether, and hack about KEY_bracketleft must be changed as said here.
 
-As for "less" ESCOM, it must be fixed in "less" itself. See comment in https://unix.stackexchange.com/questions/383061/
+As for "less" ESCOM, it must be fixed in "less" itself. See comment about @8 in https://unix.stackexchange.com/questions/383061/
