@@ -8,4 +8,4 @@ make that bold and underlined text will be handled manpages, like it is in gnome
 So, current hack about KP_Enter must be canceled altogether, and hack about KEY_bracketleft must be changed as said here. And then change em/ repo because now it is using current hack about KP_Enter; and implement KP_Enter key via KEY_ENTER in em/ repo.
 (see https://www.jbase.com/r5/knowledgebase/howto/general/common/CreateTerminfo/modify.htm and http://invisible-island.net/ncurses/ncurses.faq.html#which_terminfo)
 
-As for "less" ESCOM, it must be fixed in "less" itself. See comment about @8 in https://unix.stackexchange.com/questions/383061/
+As for "less" ESCOM, it must be fixed in "less" itself. See comment about @8 in https://unix.stackexchange.com/questions/383061/ (source is at git://github.com/gwsw/less)
