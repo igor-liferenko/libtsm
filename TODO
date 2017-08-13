@@ -2,10 +2,8 @@ understand when is called this code:
   llog_debug(vte, "unhandled control char %u", ctrl);
 (this happens when I do cfmakeraw on controlling tty and press CTRL+C)
 
-make that bold and underlined text will be handled manpages, like it is in gnome-terminal
+make that bold and underlined text will be handled in manpages, like it is in gnome-terminal
 
-^[[H is hijacked by ncurses programs, because they use "application" mode, which switches to using ^[OH. So, ^[[F may also be hijacked, because it is not used. Use it when pressing ^[ while in application mode. But then you will have to add it to terminfo, and make it recognizable by ncurses.
-So, current hack about KP_Enter must be canceled altogether, and hack about KEY_bracketleft must be changed as said here. And then change em/ repo because now it is using current hack about KP_Enter; and implement KP_Enter key via KEY_ENTER in em/ repo.
-(see https://www.jbase.com/r5/knowledgebase/howto/general/common/CreateTerminfo/modify.htm and http://invisible-island.net/ncurses/ncurses.faq.html#which_terminfo)
-
-As for "less" ESCOM, it must be fixed in "less" itself. See comment about @8 in https://unix.stackexchange.com/questions/383061/ (source is at git://github.com/gwsw/less)
+Change hack about KEY_bracketleft to use something other than KEY_ENTER (no matter if it begins with ^[[ or ^[O).
+In general, grep vte_write in wlterm/ and any sequence in 'infocmp -1' that is not in the grep may be used.
+And then change em/ repo because now it is using current hack about KEY_ENTER for CTRL+[.
