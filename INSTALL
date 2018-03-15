@@ -1,4 +1,0 @@
-./autogen.sh
-make
-make install (as user)
-ldconfig (as root)
